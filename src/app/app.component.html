@@ -1,0 +1,21 @@
+
+<div class="editor">
+  <div  [froalaEditor] [(froalaModel)]="htmlContent" ></div>
+<div class="button" >
+  <ng-container *ngIf="editorId else submit">
+    <button (click)="updateCharter(htmlContent)">Update</button>
+    <button (click)="OnDeleteClick()">Delete</button>
+
+    </ng-container>
+    <ng-template #submit>
+      <button (click)="submitCharterData(htmlContent)">Submit</button>
+    </ng-template>
+</div>
+
+</div>
+
+<div class="editor-text">
+<h3>Froala Editor Text</h3>
+
+
+</div>
